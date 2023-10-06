@@ -6,6 +6,7 @@ body {
     letter-spacing: 0.02em;
     margin: 0 auto;
     color: #434455;
+    width: 1440px;
 }
 h2 {
     font-size: 36px;
@@ -29,17 +30,27 @@ a {
     text-decoration: none;
     color: #2E2F42;
 }
+h1, h2, h3, p {
+    margin: 0 auto;
+}
+ul {
+    margin: 0 auto;
+    padding-left: 0;
+}
+img {
+    display: block;
+}
 
 /* Header */
-header {
+.header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 72px;
+    padding: 24px 156px;
+    border-bottom: 1px solid #E7E9FC;
 }
 nav {
-    margin-left: 156px;
     display: flex;
     align-items: center;
 }
@@ -69,7 +80,6 @@ nav {
 }
 .contacts {
     font-style: normal;
-    margin-right: 156px;
 }
 .contacts-link {
     color: #434455;
@@ -85,13 +95,14 @@ nav {
 }
 
 /* 1st section Order*/
-.section-request {
+.request-container {
     background-color: #2E2F42;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 600px;
     justify-content: center;
+    gap: 48px;
+    padding: 188px 472px;
 }
 .request-title {
     font-size: 56px;
@@ -99,7 +110,6 @@ nav {
     line-height: 1.07;
     text-align: center;
     color: #FFFFFF;
-    margin-top: 0;
     letter-spacing: 0.02em;
     width: 500px;
     
@@ -111,44 +121,52 @@ nav {
     color: white;
     cursor: pointer;
     line-height: 1.5;
-    flex-basis: 56px;
-    width: 169px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 4px 4px #00000026;
+    padding: 16px 32px;
 }
 .request-button:hover, .request-button:focus {
     background-color: #404BBF;
 }
 
 /* 2nd section Principles */
+.principles-container {
+    padding: 120px 156px;
+}
 .principles-main-title {
     display: none;
 }
 .principles-title {
     text-align: left;
     color: #2e2f42;
+    margin: 0;
 }
 .principles-para {
     color: #434455;
 }
-.order-list {
+.principles-list {
     display: flex;
-    margin: 120px 156px;
     justify-content: center;
-    align-items: center;
     gap: 24px;
+    flex-direction: row;
 }
-.order-list li {
-    flex-basis: 264px;
+.principles-list li {
+    flex-basis: calc((100% - 72px) / 4);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
 }
 
 /* 3rd section Our Team */
-.section-team {
+.team-container {
     text-align: center;
     background-color: #F4F4FD;
+    padding: 120px 156px;
 }
 .team-title {
     text-transform: capitalize;
     color: #2e2f42;
-    padding-top: 120px;
     text-align: center;
     margin-bottom: 72px;;
 }
@@ -157,10 +175,13 @@ nav {
     gap: 24px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 120px;
 }
 .team-list li {
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-para {
     font-size: 16px;
@@ -169,15 +190,23 @@ nav {
 .team-names {
     color: #2e2f42;
 }
-
+.team-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 32px;
+    width: 100%;
+}
 
 /* 4th section Our Portfolio */
-.section-portfolio {
+.portfolio-container {
     text-align: center;
+    padding: 120px 156px;
 }
 .portfolio-title {
     text-transform: capitalize;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
 .portfolio-para {
     color: #434455;
@@ -185,9 +214,28 @@ nav {
 .portfolio-name {
     color: #2e2f42;
 }
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.portfolio-list li {
+    flex-basis: calc((100% - 48px) / 3);
+}
+.portfolio-list-container {
+        border: 1px solid #E7E9FC;
+        border-top: none;
+        padding: 32px 0;
+}
 
 
 /* Footer */
+.footer-container{
+    padding: 100px 156px;
+    display: flex;
+    flex-direction: column;
+    gap: 17.5px;
+}
 .footer {
     background-color: #2E2F42;
 }
@@ -195,5 +243,7 @@ footer .logo .logo-span {
     color: #F4F4FD;
 }
 .footer-para {
-    color:#F4F4FD
+    color:#F4F4FD;
+    margin: 0;
+    width: 264px;
 }
