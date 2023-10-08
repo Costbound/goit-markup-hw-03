@@ -121,7 +121,7 @@ img {
     justify-content: center;
     gap: 48px;
     width: 100%;
-    padding: 188px 0;
+    padding:  0;
 }
 .request-title {
     font-size: 56px;
@@ -159,8 +159,17 @@ img {
     width: 100%;
 }
 .visually-hidden {
-    display: none;
-    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .principles-title {
     text-align: left;
@@ -211,6 +220,7 @@ img {
     flex-direction: column;
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    width: calc((100% - 72px) / 4);
 }
 .team-para {
     font-size: 16px;
@@ -225,9 +235,6 @@ img {
     flex-direction: column;
     justify-content: space-around;
     padding: 32px 0;
-}
-.team-list li {
-    width: calc((100% - 72) / 4);
 }
 
 /* 4th section Our Portfolio */
